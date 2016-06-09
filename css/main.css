@@ -1,0 +1,139 @@
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+html,body{
+	background-color:#eee;
+	height: 100%;
+	margin: 0px 20px;
+}
+
+h1{
+	text-align:center;
+}
+
+.container{
+	/* width:960px; 
+	height:450px; 
+	margin:60px auto;  */
+	width: 100%;
+	height: 100%;
+	position:relative;
+	overflow: hidden;
+
+}
+
+.container img{
+	padding:10px 10px 15px; 
+	background:white; 
+	border:1px solid #ddd; 
+	box-shadow:2px 2px 3px rgba(50, 50, 50, 0.4);
+	-webkit-transition:all 0.5s ease-in;
+	-moz-transition:all 0.5s ease-in;
+	transition:all 0.5s ease-in; 
+	position:absolute; 
+	z-index:1;
+	max-width: 100px;
+}
+
+.container img:hover{
+	box-shadow:15px 15px 20px rgba(50, 50, 50, 0.4); 
+	-webkit-transform:rotate(0deg) scale(1.20); 
+	-moz-transform:rotate(0deg) scale(1.20); 
+	transform:rotate(0deg) scale(1.20); 
+	z-index:2;
+}
+
+
+@keyframes imgmv{
+	0%   {transform:scale(1,1); opacity:1;}
+	100% {transform:scale(0,0); opacity: 0}
+}
+
+.imgmv{
+	animation:imgmv 10s 1 linear forwards;
+}
+
+
+@keyframes  holeRotate{
+	0%    { transform:rotate(0deg) scale(0,0); }
+	100%  { transform:rotate(360deg) scale(3,3);}
+}
+
+
+
+.hole-wrap{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	text-align: center;
+	z-index: 5;
+	overflow: hidden;
+}
+
+.hole-wrap .hole{
+	animation:holeRotate 7s 1 linear forwards;
+}
+
+.bg_wrap{
+	width: 100%;
+	height: 100%;
+	background-color: #1a2448;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	display: none;
+}
+
+.bg_wrap .end_bg{
+	width: 92%;
+	position: absolute;
+	left: 4%;
+	
+}
+
+.ctn {
+	position: absolute;
+	/*top: 50%;
+	left: 50%;
+	 margin-left: -77px;
+	margin-top: -210px;
+
+	transform:translate(-50%,-50%);
+ */
+	/* width:153px; 
+	height:420px; 
+	width: 800px;
+	height: 250px;*/
+
+	width: 45%; 
+	/* width: 500px; */
+	right: 12%;
+	top: 55%;
+
+	-webkit-transform-style:preserve-3d;
+}
+.ctn img{
+	width: 100%;
+	height: auto;
+	visibility: hidden;
+}
+.hole-wrap .ctn div {
+	position:absolute; 
+	transition: 0.6s all ease;
+	-webkit-transition: 0.6s all ease;
+	/*transform:translate(0,0) translateZ(0) scale(1,1) rotateX(0deg) rotateY(0deg);*/
+	-webkit-transform:translate(0,0) translateZ(0) scale(1,1) rotateX(0deg) rotateY(0deg);
+	
+}
+
+.hole-wrap .ctn div {
+	/* background: url(http://p3.qhimg.com/d/_picassofreewifi/ios20150526/2_1.png) no-repeat; */
+	background: url('../images/sunac.png') no-repeat;
+	/* background-size: 153px auto; */
+	/* background-size: 500px auto; */
+}
